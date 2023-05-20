@@ -1,0 +1,15 @@
+<nz-row>
+    <div nz-col  *ngFor="let item of countries" class="gutter-row" [nzXs]="{ span: 5, offset: 1 }" [nzLg]="{ span: 6, offset: 2 }">
+      <nz-card style="width:300px;" nzTitle="{{item?.name}}" [nzExtra]="extraTemplate">
+        <img src="{{item?.media.flag}}" alt="" srcset="" style="width:250px;" >
+        <img src="{{item?.media.emblem}}" alt="" srcset="" style="width:250px;" >
+
+      </nz-card>
+      <ng-template #extraTemplate>
+        <a>{{item?.id}}</a>
+      </ng-template>
+    </div>
+</nz-row>
+  
+
+ 

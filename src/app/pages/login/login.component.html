@@ -1,0 +1,14 @@
+
+<div>
+  <form  [formGroup]="loginForm" (ngSubmit)="submitForm()">
+    <h1>Log in</h1>
+    <input type="email"  formControlName="username" placeholder="Username"/>
+    <span class="text-danger" *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched">
+      username is required</span>
+    <input type="password"  formControlName="password" placeholder="Password"/>
+    <span class="text-danger" *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+      password is required</span>
+    <button type="submit" >Login</button>
+    <a href="#">Forgot your password?</a>
+  </form>
+</div>
